@@ -11,10 +11,12 @@
 /******************************************************************/
 /*********************** SELECT THEME HERE ************************/
 @import "themes/system.css";
+@import "tweaks/tag.css";
 /******************************************************************/
 /******************************************************************/
 
 /* Uncommment to use the dark folder pane style when using the system theme with dark menus */
+@import "icons/darkIcons.css"
 @import "tweaks/dark-folder-pane.css";
 
 /* Select icon theme (leave commented to use default for the selected theme)*/
@@ -28,7 +30,7 @@
 /****************************************************************************/
 :root {
   /*---- General Options ----*/
-  /*--default-font: var(--light-sans-font); /* Change to var(--system-font) to use your default font, or specify a font name */
+  --default-font: var(--system-font); /* Change to var(--system-font) to use your default font, or specify a font name 
   /*--menu-text-color: MenuText;*/
   
   /*---- Highlight Colors - Used if more specific ones aren't specified below ----/
@@ -62,6 +64,48 @@
   /*--subject-line-font-size: 150%;*/
   /*--headers-background-color: transparent;*/
   /*--headers-text-color: WindowText;*/
+  --dark-color: #3c3b37;
+  --dark-text-color: white;
+  --dark-white-background: white;
+  --dark-light-background: #F2F1F0;
+  --dark-light-text-color: #4C4C4C;
+  
+  /*** Set active tab background color: ***/
+  --fgTabBackgroundColor: var(--dark-light-background) !important;
+  
+  --menu-text-color: var(--dark-text-color);
+  /*** These highlight colors are used if more specific ones aren't specified below ***/
+  --highlight-color: #F07746;
+  --highlight-text-color: var(--dark-light-text-color);
+  
+  /*---- Tree Views (Folder Tree/Message List) General Options ----*/
+  --tree-row-highlight-background-color: var(--highlight-color);
+  --tree-row-highlight-text-color: var(--highlight-text-color);
+  
+  /*---- Folder Tree ----*/
+  --folder-tree-background-color: var(--dark-color) !important;
+  --folder-tree-text-color: var(--dark-text-color);
+  --folder-tree-row-height: 18px;
+  --folder-tree-highlight-background-color: var(--highlight-color);
+  --folder-tree-highlight-text-color: var(--folder-tree-text-color);
+  
+  /*---- Message List ----*/
+  --message-list-header-background-color: var(--dark-light-background);
+  --message-list-header-text-color: var(--dark-light-text-color);
+  --message-list-background-color: var(--dark-white-background);
+  --message-list-text-color: var(--dark-light-text-color);
+  --message-list-row-height: 24px;
+  --message-list-highlight-background-color: var(--tree-row-highlight-background-color);
+  --message-list-highlight-text-color: var(--tree-row-highlight-text-color);
+  
+  /*---- Scollbar ----*/
+  --scrollbar-thumb-color: rgba(127,127,127,0.5);
+  --scrollbar-thumb-hover-color: var(--highlight-color);
+  
+  /*---- Message Headers (To/Subject/From etc) ----*/
+  --subject-line-font-size: 120%;
+  --headers-background-color: var(--dark-light-background);
+  --headers-text-color: var(--dark-light-text-color);
 }
 /****************************************************************************/
 /****************************************************************************/

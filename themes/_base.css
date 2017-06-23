@@ -38,8 +38,8 @@
 }
 
 toolbar > toolbarbutton {
-	margin-right: 10px !important;
-	margin-left: 10px !important;
+	margin-right: 5px !important;
+	margin-left: 5px !important;
 }
 
 box, hbox, vbox, toolbox {
